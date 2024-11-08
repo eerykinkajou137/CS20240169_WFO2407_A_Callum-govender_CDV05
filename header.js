@@ -145,6 +145,14 @@ class homeHeader extends HTMLElement {
         let component = "custom-main"; // Component to load
         loadPage(component);
       });
+
+    this.shadowRoot
+      .querySelector("#servicesBtn")
+      .addEventListener("click", (event) => {
+        event.preventDefault();
+        let component = "custom-section"; // Component to load
+        loadPage(component);
+      });
   }
 }
 
