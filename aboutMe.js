@@ -78,6 +78,42 @@ h2.heading {
 }
   
   
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .content-AboutMe {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1.5em;
+    max-width: 100%;
+    margin-top: 20%;
+    text-align: left;
+  }
+
+  .content_container {
+    flex-direction: row;
+    gap: 1em;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .V-Line {
+    display: none;
+  }
+
+  .skills {
+    padding-left: 0;
+  }
+
+  .skills li {
+    font-size: 0.9em;
+  }
+}
 
 
 
@@ -86,7 +122,7 @@ h2.heading {
      <div class="content-AboutMe" id="aboutMe">
       <h1 class="heading">More About Me -</h1>
 
-      <br />
+      <br/>
 
       <div class="content_container">
         <!-- Education Section -->

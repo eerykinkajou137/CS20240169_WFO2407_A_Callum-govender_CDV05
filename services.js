@@ -17,7 +17,7 @@ class ServicesSection extends HTMLElement {
       .content-Services {
         display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     justify-content: space-between;
     align-items: flex-start;
     display: flex;                     /* Use flexbox for layout */
@@ -45,7 +45,7 @@ class ServicesSection extends HTMLElement {
       }
   
       .container {
-        width: 60%;
+        width: 80%;
         margin: 20px;
         padding: 20px;
       }
@@ -55,7 +55,7 @@ class ServicesSection extends HTMLElement {
         gap: 5%; /* Reduced gap between containers */
         justify-content: space-between;
         align-items: flex-start;
-        height: auto;
+        
         padding-left: 5%;
         padding-right: 5%;
       }
@@ -76,6 +76,40 @@ class ServicesSection extends HTMLElement {
         margin: 20px;
         padding: 20px;
       }
+
+      @media (max-width: 768px) {
+      .content-Services {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1.5em;
+    max-width: 100%;
+    margin-top: 20%;
+    text-align: left;
+  }
+
+  .content_container {
+    flex-direction: row;
+    width: 100%;
+    gap: 1em;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .container {
+    width: 100%;
+    margin: 5%;
+    padding: 5%;
+  }
+    .container-2{
+  margin: 20px;
+  padding: 20px;
+}
+
+  .V-Line {
+    display: none;
+  }
+      
+      }
       </style>
   
       <div class="content-Services" id="services">
@@ -85,6 +119,7 @@ class ServicesSection extends HTMLElement {
           <!-- Web Development Section -->
           <div class="container">
             <h3>Web Development:</h3>
+            <br/>
             <p class="context-services">
               I offer custom websites built with HTML5, CSS3, Tailwind CSS, and JavaScript. My websites are responsive and optimized for user experience, ensuring a seamless interaction on any device.
             </p>

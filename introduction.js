@@ -103,6 +103,58 @@ class introductionDiv extends HTMLElement {
           color: #fff;
           text-decoration: none;
         }
+
+        /* Mobile and Tablet Styles for Introduction Component */
+@media (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column; /* Stack profile and content vertically */
+    align-items: center;    /* Center everything horizontally */
+    justify-content: center; /* Vertically center content */
+    max-width: 100%;        /* Ensure it takes full width */
+    margin: 4em 0;          /* Adjust margins for spacing */
+    padding: 2em;           /* Add padding to the container */
+    background: white;      /* Maintain white background */
+    border-radius: 8px;     /* Keep rounded corners */
+    box-shadow: none;       /* Remove outer shadow */
+  }
+
+  /* Profile Image */
+  #profile-Img {
+    width: 40%;             /* Set profile image to take 60% of the width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;     /* Add space below the image */
+    margin-top: 7em;
+  }
+
+  #profile-Img img {
+    width: 100%;            /* Make sure image fills the container */
+    height: auto;           /* Maintain image aspect ratio */
+    border-radius: 50%;     /* Circular profile image */
+    border: 1px solid #000; /* Optional border around the profile */
+    box-shadow: none;       /* Remove box shadow */
+  }
+
+  /* Content Section */
+  .Content_context {
+    width: 100%;            /* Ensure content takes full width */
+    padding: 0 2em;         /* Adjust padding */
+    text-align: center;     /* Center the text for better presentation */
+  }
+
+  h3.greeting,
+  h1.intro-Heading,
+  p.context_intro {
+    margin: 0 0 1.5em 0;    /* Maintain spacing between text elements */
+    text-align: center;     /* Center the text */
+  }
+
+  .Buttons {
+    margin: 1.5em 0;        /* Add margin for buttons */
+  }
+
   
         </style>
   
