@@ -121,6 +121,11 @@ class homeHeader extends HTMLElement {
             box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
             transform: translate(2px, 2px);
           }
+          
+          a{
+            color: white;
+             text-decoration: none
+          }
 
           @media (max-width: 768px) {
             header {
@@ -148,10 +153,11 @@ class homeHeader extends HTMLElement {
           <nav>
             <p class="nav_Item-1" id="homeBtn"><a href="#content-Intro">home</a></p>
             <p class="nav_Item-2" id="aboutMeBtn"><a href="#aboutMe">about me</a></p>
-            <p class="nav_Item-3" id="projBtn"><a>projects</a></p>
+            <p class="nav_Item-3" id="projBtn"><a href="#projects">projects</a></p>
             <p class="nav_Item-4" id="servicesBtn"><a>Services</a></p>
           </nav>
-          <button class="button-50" role="button" id="contact">Let's Talk</button>
+          <button class="button-50" role="button" id="contact"><a href="mailto:callumlevigovender@gmail.com">Let's Talk</a></button>
+          
         </header>
       `;
     // Attach event listeners inside shadow DOM for larger screens
@@ -159,6 +165,7 @@ class homeHeader extends HTMLElement {
       .querySelector("#aboutMeBtn")
       .addEventListener("click", (event) => {
         event.preventDefault();
+        fadeInPage();
         let component = "custom-aboutMe"; // Component to load
         loadPage(component);
       });
@@ -167,6 +174,7 @@ class homeHeader extends HTMLElement {
       .querySelector("#homeBtn")
       .addEventListener("click", (event) => {
         event.preventDefault();
+        fadeInPage();
         let component = "custom-main"; // Component to load
         loadPage(component);
       });
@@ -175,7 +183,17 @@ class homeHeader extends HTMLElement {
       .querySelector("#servicesBtn")
       .addEventListener("click", (event) => {
         event.preventDefault();
+        fadeInPage();
         let component = "custom-section"; // Component to load
+        loadPage(component);
+      });
+
+    this.shadowRoot
+      .querySelector("#projBtn")
+      .addEventListener("click", (event) => {
+        event.preventDefault();
+        fadeInPage();
+        let component = "custom-proj"; // Component to load
         loadPage(component);
       });
   }
@@ -191,16 +209,18 @@ function loadPage(component) {
     document.getElementById("page").appendChild(componentElement);
   } else {
     document.getElementById("page").innerHTML = "";
-    const componentBr = document.createElement("custom-div");
+
     const componentElement = document.createElement("custom-main");
     const componentElement2 = document.createElement("custom-aboutMe");
     const componentElement3 = document.createElement("custom-section");
+    const componentElement4 = document.createElement("custom-proj");
 
     document.getElementById("page").appendChild(componentElement);
-    document.getElementById("page").appendChild(componentBr);
     document.getElementById("page").appendChild(componentElement2);
-    document.getElementById("page").appendChild(componentBr);
+
     document.getElementById("page").appendChild(componentElement3);
+
+    document.getElementById("page").appendChild(componentElement4);
   }
 }
 

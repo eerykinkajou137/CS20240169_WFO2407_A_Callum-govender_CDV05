@@ -76,6 +76,10 @@ h2.heading {
   margin: 20px;
   padding: 20px;
 }
+
+custom-div{
+ display:none;
+}
   
   
 /* Mobile Responsive */
@@ -118,12 +122,10 @@ h2.heading {
 
 
     </style>
-
+     <br/>
+     <custom-div></custom-div>
      <div class="content-AboutMe" id="aboutMe">
       <h1 class="heading">More About Me -</h1>
-
-      <br/>
-
       <div class="content_container">
         <!-- Education Section -->
         <div class="container">
