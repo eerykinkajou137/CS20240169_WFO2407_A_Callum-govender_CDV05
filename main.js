@@ -165,7 +165,7 @@ class homeHeader extends HTMLElement {
       .querySelector("#aboutMeBtn")
       .addEventListener("click", (event) => {
         event.preventDefault();
-        fadeInPage();
+
         let component = "custom-aboutMe"; // Component to load
         loadPage(component);
       });
@@ -174,7 +174,7 @@ class homeHeader extends HTMLElement {
       .querySelector("#homeBtn")
       .addEventListener("click", (event) => {
         event.preventDefault();
-        fadeInPage();
+
         let component = "custom-main"; // Component to load
         loadPage(component);
       });
@@ -183,7 +183,7 @@ class homeHeader extends HTMLElement {
       .querySelector("#servicesBtn")
       .addEventListener("click", (event) => {
         event.preventDefault();
-        fadeInPage();
+
         let component = "custom-section"; // Component to load
         loadPage(component);
       });
@@ -192,7 +192,7 @@ class homeHeader extends HTMLElement {
       .querySelector("#projBtn")
       .addEventListener("click", (event) => {
         event.preventDefault();
-        fadeInPage();
+
         let component = "custom-proj"; // Component to load
         loadPage(component);
       });
